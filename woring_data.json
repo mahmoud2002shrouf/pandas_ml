@@ -1,0 +1,44 @@
+[
+  {
+    "model": "Mazda RX4",
+    "mpg": -5,
+    "cyl": 6,
+    "disp": 160,
+    "hp": 110,
+    "drat": -3.9,
+    "wt": 2.62,
+    "qsec": 16.46,
+    "vs": 0,
+    "am": 2,
+    "gear": 4,
+    "carb": 10
+  },
+  {
+    "model": "Datsun 710",
+    "mpg": 105,
+    "cyl": -4,
+    "disp": -108,
+    "hp": 93,
+    "drat": 3.85,
+    "wt": -2.32,
+    "qsec": 18.61,
+    "vs": 3,
+    "am": 1,
+    "gear": 7,
+    "carb": -1
+  }, 
+  {
+    "model": "Hornet Sportabout",
+    "mpg": 18.7,
+    "cyl": 8,
+    "disp": 360,
+    "hp": 175,
+    "drat": 3.15,
+    "wt": 3.44,
+    "qsec": 17.02,
+    "vs": 5,
+    "am": 6,
+    "gear": 3,
+    "carb": 2
+  }
+]
