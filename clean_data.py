@@ -1,8 +1,9 @@
-import pandas as pd
+import pandas as pd  # this for import pandas libary
+import matplotlib.pyplot as plt  # هاي مسؤولة عن المخططات الهندسية
 
 #################################################
 # ملاحظات مهمة في الاحصاء :
-# mean = مجموع القيم /عددها
+# mean = مجموع القيم /عددهاsnjoifjsvjd
 # median = برتب القيم تصاعدي او تنازلي القيمة الي بالوسط هي الميديان ممكن تكون قيمة اذا كان عدد الاعداد فردية و قيميتين اذا زوجي
 # Mode = القيمة الاكثر تكرار
 #################################################
@@ -140,10 +141,42 @@ import pandas as pd
 # 3-Removing Duplicates
 # بدي قيم متكررة
 ###########################################
-df = pd.read_json("duplicates.json")
+df = pd.read_csv("california_housing_train.csv")
 ###########################################
-df.drop_duplicates(inplace=True)
-print(df.to_string())
+# df.drop_duplicates(inplace=True)
+# print(df.to_string())
 #       model   mpg  cyl   disp   hp  drat    wt   qsec  vs  am  gear  carb
 # 0  Mazda RX4  21.0    6  160.0  110  3.90  2.62  16.46   0   1     4     4
 # 2  Merc 280C  17.8    6  167.6  123  3.92  3.44  18.90   1   0     4     4
+
+
+# 333
+## Data Correlations##
+# Finding Relationships#
+# print(df.corr())
+# EX :
+# that give me a relateion betwwn some data such as relation between longitude and latitude using values between 1 and -1 if 1
+# اذا كانت القيمة واحد او فوق الصفر اذا يوجد علاقة اي انه كلما زاد قيمة longitude تزداد قيمة latitude و العكس
+#                     longitude  latitude  ...  median_income  median_house_value
+# longitude            1.000000 -0.925208  ...      -0.015485           -0.044982
+# latitude            -0.925208  1.000000  ...      -0.080303           -0.144917
+# housing_median_age  -0.114250  0.016454  ...      -0.115932            0.106758
+# total_rooms          0.047010 -0.038773  ...       0.195383            0.130991
+# total_bedrooms       0.071802 -0.069373  ...      -0.013495            0.045783
+# population           0.101674 -0.111261  ...      -0.000638           -0.027850
+# households           0.059628 -0.074902  ...       0.007644            0.061031
+# median_income       -0.015485 -0.080303  ...       1.000000            0.691871
+# median_house_value  -0.044982 -0.144917  ...       0.691871            1.000000
+
+
+##################################################################################
+##
+# Pandas - Plotting
+##
+
+df.plot(kind='bar', x='median_income',
+        y='population')
+
+# kind : نوع الرسم
+# ('line', 'bar', 'barh', 'kde', 'density', 'area', 'hist', 'box', 'pie', 'scatter', 'hexbin')
+plt.show()  # عرض
