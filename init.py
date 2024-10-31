@@ -1,5 +1,5 @@
 import pandas as pd
-df=pd.read_json("mtcars.json")
+df=pd.read_json("dataset\mtcars.json")
 print(df.info())
 
 #series :data=[1,2,3]
@@ -52,7 +52,7 @@ print(df.info())
 
 #########################################################################################################
 # if i have excel or csv i use this function read_csv(path csv file)
-# df=pd.read_csv("california_housing_train.csv")
+# df=pd.read_csv("dataset\california_housing_train.csv")
 #print(df) : 
 #        longitude  latitude  ...  median_income  median_house_value
 # 0        -114.31     34.19  ...         1.4936             66900.0
@@ -70,7 +70,7 @@ print(df.info())
 
 #print(df.to_string()) : that print all row(entire in DataFrame) ما تسويها بلاش تحرق الجهاز خليه مسلك
 #####################################
-# df=pd.read_json("mtcars.json")
+# df=pd.read_json("dataset\mtcars.json")
 # print(df)
 
 #                   model   mpg  cyl   disp   hp  ...   qsec  vs  am  gear  carb

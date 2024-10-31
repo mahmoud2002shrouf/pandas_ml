@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt  # هاي مسؤولة عن المخططات ا�
 # قطرة :   dropna
 
 ###########################################
-# df = pd.read_json("em.json")
+df = pd.read_json("dataset/em.json")
 ###########################################
 
 #####
@@ -50,6 +50,16 @@ import matplotlib.pyplot as plt  # هاي مسؤولة عن المخططات ا�
 # 1      Datsun 710   22.8    4   108   93  3.85    2.320  18.61   1   1     4     1
 # 2  Hornet 4 Drive   21.4    6   258  110  3.08    3.215  19.44   1   0     3     1
 
+#####
+#####
+# هاي بتعطي القيمة الفارغة القيمة لاي قبلها
+df.fillna(method='ffill', inplace=True)
+print(df.to_string())
+#             model    mpg  cyl  disp   hp  drat       wt   qsec  vs  am  gear  carb
+#             model   mpg  cyl  disp   hp  drat     wt   qsec  vs  am  gear  carb
+# 0      Datsun 710  22.8    4   108   93  3.85  2.320  18.61   1   1     4     1
+# 1       Mazda RX4  22.8    6   160  110  3.90  2.320  16.46   0   1     4     4
+# 2  Hornet 4 Drive  21.4    6   258  110  3.08  3.215  19.44   1   0     3     1
 #####
 # هان لعمود مجدد
 # df["mpg"].fillna(110, inplace = True)
@@ -84,7 +94,7 @@ import matplotlib.pyplot as plt  # هاي مسؤولة عن المخططات ا�
 # 2-Wrong Format
 # هان بدنا نعالج مشاكل الفورمات الخطا يعني بده رقم و انا معطيه نص
 ###########################################
-# df = pd.read_json("format_woring.json")
+# df = pd.read_json("dataset\format_woring.json")
 ###########################################
 # 1 - بدي احول نوع الداتا الموجود ل نوع داتا انا بدي اياه
 
@@ -107,7 +117,7 @@ import matplotlib.pyplot as plt  # هاي مسؤولة عن المخططات ا�
 # 3-Wrong Data
 # مثلا عندي قيم شاذة او مثلا سرعات بالسالب
 ###########################################
-# df = pd.read_json("woring_data.json")
+# df = pd.read_json("dataset\woring_data.json")
 ###########################################
 # استبدال القيم السالبة بالقيمة المطلقة
 # columns_to_check = ['mpg', 'cyl', 'disp', 'drat', 'wt', 'carb']
@@ -141,7 +151,7 @@ import matplotlib.pyplot as plt  # هاي مسؤولة عن المخططات ا�
 # 3-Removing Duplicates
 # بدي قيم متكررة
 ###########################################
-df = pd.read_csv("california_housing_train.csv")
+# df = pd.read_csv("duplicates.json")
 ###########################################
 # df.drop_duplicates(inplace=True)
 # print(df.to_string())
@@ -174,9 +184,9 @@ df = pd.read_csv("california_housing_train.csv")
 # Pandas - Plotting
 ##
 
-df.plot(kind='bar', x='median_income',
-        y='population')
+# df.plot(kind='bar', x='median_income',
+#         y='population')
 
 # kind : نوع الرسم
 # ('line', 'bar', 'barh', 'kde', 'density', 'area', 'hist', 'box', 'pie', 'scatter', 'hexbin')
-plt.show()  # عرض
+# plt.show()  # عرض

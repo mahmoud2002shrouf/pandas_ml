@@ -1,18 +1,6 @@
 [
-  {
-    "model": "Mazda RX4",
-    "mpg": null,
-    "cyl": 6,
-    "disp": 160,
-    "hp": 110,
-    "drat": 3.9,
-    "wt": null,
-    "qsec": 16.46,
-    "vs": 0,
-    "am": 1,
-    "gear": 4,
-    "carb": 4
-  },
+ 
+  
   {
     "model": "Datsun 710",
     "mpg": 22.8,
@@ -27,6 +15,20 @@
     "gear": 4,
     "carb": 1
   }, 
+  {
+    "model": "Mazda RX4",
+    "mpg": null,
+    "cyl": 6,
+    "disp": 160,
+    "hp": 110,
+    "drat": 3.9,
+    "wt": null,
+    "qsec": 16.46,
+    "vs": 0,
+    "am": 1,
+    "gear": 4,
+    "carb": 4
+  },
   {
     "model": "Hornet 4 Drive", 
     "mpg": 21.4, 
